@@ -24,7 +24,17 @@ void program1() {
     printf("Area of rectangle is %d", a*b );
 }
 
+void program3() {
+    int c;
+    printf("Whats the value of celcius: \n");
+    scanf("%.2f", &c);
+
+    printf("The value of Fahrenheit is %.5f", 1.8*c+ 32);
+}
+
+
+
 int main() {
-    program1();
+    program3();
     return 0;
 }
