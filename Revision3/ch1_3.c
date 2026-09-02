@@ -1,3 +1,5 @@
+//!  CHAPTER 1
+
 #include<stdio.h> //& library
 
 void program() {
@@ -33,8 +35,25 @@ void program3() {
 }
 
 
+//!  CHAPTER 2
+
+//@  to find remainder
+
+void program4() {
+    int a;
+    int b;
+
+    printf("Whats the value of a: " ); 
+    scanf("%d", &a);//@ dont use \n in scanf
+
+    printf("\nWhats the value of b: " );
+    scanf("%d", &b);
+
+    printf("\nThe remainder is %d", a % b); //@ for d only if f use fmod
+}
+
 
 int main() {
-    program3();
+    program4();
     return 0;
 }
