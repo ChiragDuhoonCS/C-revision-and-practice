@@ -8,17 +8,32 @@ Search for a number entered by the user and print its index if found
 
 Requirement: Use an array and loops. No separate functions.*/
 
-#include<stdio.h>
+#include <stdio.h>
 
 void function1() {
     int n;
     int arr[10];
 
-    for (int i = 0; i < n; i++)
-    {
-        printf(arr[i]);
+    printf("Enter number of elements (max 10): ");
+    scanf("%d", &n);
+
+    // Limit input to array capacity
+    if (n > 10) {
+        n = 10;
     }
-    
+
+    // Input loop
+    for (int i = 0; i < n; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+
+    // Output loop
+    printf("Array elements: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
 }
 
 int main() {
