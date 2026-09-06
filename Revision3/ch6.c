@@ -10,6 +10,11 @@ Requirement: Perform the swap through a separate swap() function using pointers.
 
 #include<stdio.h>
 
+void swap(int *i, int *n) {
+    int temp = *i;
+    *i = *n;
+    *n = temp;
+}
 
 void function1() {
     int i;
