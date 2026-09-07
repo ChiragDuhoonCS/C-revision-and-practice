@@ -7,21 +7,32 @@ Check whether it is a palindrome
 
 Requirement: Use string functions where appropriate (strlen, strrev if available), and loops. No separate user-defined functions.*/
 
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
 void function1() {
     char st[50];
     int y;
 
-    printf("Yo whats string: \n");
+    printf("Yo whats string: ");
+    
+    // Read string with spaces safely (prevents buffer overflow)
+    if (fgets(st, sizeof(st), stdin) != NULL) {
+        // Strip the newline character that fgets captures
+        st[strcspn(st, "\n")] = '\0';
+    }
+
+    // puts automatically appends a newline
     puts(st);
 
-    printf("%s", st);
+    // printf needs an explicit \n
+    printf("%s\n", st);
 
+    // strlen excludes the null character '\0'
     y = strlen(st);
 
-    printf("%d", &y);
+    // Pass y directly; do not use &y in printf
+    printf("Length: %d\n", y);
 }
 
 int main() {
