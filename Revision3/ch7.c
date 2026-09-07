@@ -36,7 +36,34 @@ void function1() {
     printf("\n");
 }
 
-int main() {
-    function1();
-    return 0;
+void function2() {
+    char ch;
+    int n;
+    char array[30];
+
+    printf("Enter value of n: \n");
+    scanf("%d", &n);
+
+    if (n > 30) {
+        n = 30;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter Students Name: ");
+        scanf("%s", &ch);
+    }
+    
+    for (int i = 0; i < n; i++)
+    {
+        printf("%s", array[i]);
+    }
+    printf("\n");
+    
 }
+
+
+int main() {
+    function2();
+    return 0;
+} 
