@@ -39,7 +39,7 @@ void function1() {
 void function2() {
     char ch;
     int n;
-    char array[30];
+    char names[30][50];
 
     printf("Enter value of n: \n");
     scanf("%d", &n);
@@ -47,18 +47,28 @@ void function2() {
     if (n > 30) {
         n = 30;
     }
+    if (n < 1) {
+        return ;
+    }
+
 
     for (int i = 0; i < n; i++)
     {
         printf("Enter Students Name: ");
-        scanf("%s", &ch);
+        scanf("%49s", &names[i]); //& tells 49 char
     }
+
+    printf("========= Student List ==================\n");
     
     for (int i = 0; i < n; i++)
     {
-        printf("%s", array[i]);
+        printf("%d   %s",i+1 ,names[i]);
+
+         printf("\n");
+
     }
-    printf("\n");
+
+    printf("========================================");
     
 }
 
