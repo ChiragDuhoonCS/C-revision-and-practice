@@ -81,7 +81,24 @@ void yo1() {
  
 
 
+int yo3() {
+    for (int i = 1; i <= 5; i++) {
+        
+        // Skip printing if i is 3
+        if (i == 3) {
+            continue; 
+        }
 
+        // Stop the loop completely if i reaches 5
+        if (i == 5) {
+            break; 
+        }
+
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
 
 int main() {
     yo3();
