@@ -45,19 +45,22 @@ int p4() {
     for (int i = 1; i <= n; i++) {
         prime = n%i;
         if (prime == 0)
-         printf("%d isnt prime\n",n);
-        else  {
-            printf("%d is prime number\n",n);
-        }    
+            break;
+        
     }
-    
+    if(prime == 0)  {
+            printf("%d isnt prime number\n",n);
+        }
+    else  {
+            printf("%d is prime number\n",n);
+        }            
 
 }
 
 
 
 int main() {
-    p2();
+    p4();
     return 0;
 
 }
