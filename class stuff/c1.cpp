@@ -22,10 +22,12 @@ int module(int a,int b) {
 
 int main() {
     int a,b;
-    printf("Find a: \n");
+    printf("Find a: ");
     scanf("%d",&a);
 
-    printf("Find b: \n");
+    printf("\n");
+
+    printf("Find b: ");
     scanf("%d",&b);
 
     sum(a,b);
@@ -34,9 +36,11 @@ int main() {
     divide(a,b);
     module(a,b);
 
-    printf("Sum: %d",sum);
-    printf("Sum: %d",sub);
-    printf("Sum: %d",mul);
-    printf("Sum: %d",sum);
-    printf("Sum: %d",sum);
+    printf("============================\n");
+
+    printf("Sum: %d\n", sum(a, b));
+    printf("Sub: %d\n", sub(a, b));
+    printf("Multiply: %d\n", multiply(a, b));
+    printf("Divide: %d\n", divide(a, b));
+    printf("Module: %d\n", module(a, b));
 }
