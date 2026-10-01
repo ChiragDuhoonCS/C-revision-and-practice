@@ -42,5 +42,5 @@ int main() {
     printf("Sub: %d\n", sub(a, b));
     printf("Multiply: %d\n", multiply(a, b));
     printf("Divide: %d\n", divide(a, b));
-    printf("Module: %d\n", module(a, b));
+    printf("Reminder: %d\n", module(a, b));
 }
