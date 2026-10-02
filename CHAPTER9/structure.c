@@ -11,4 +11,11 @@ void displayStudent(struct Student s) {
     printf("Marks      : %.2f\n", s.marks);
 }
 
-i
+int main() {
+    struct Student s1 = {101, 89.5};
+
+    // Passing the structure variable directly
+    displayStudent(s1);
+
+    return 0;
+}
