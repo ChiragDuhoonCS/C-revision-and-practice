@@ -27,4 +27,11 @@ This function is used to concatenate two strings.
 char s1[12] = "hello"; 
 char s2[] = "harry"; 
 strcat(s1,s2); // s1 now contains "helloharry" <no space in between> 
-@ 
+@ STRCMP() 
+This function is used to compare two strings. It returns 0 if the strings are equal, a 
+negative value if the first string's mismatching character's ASCII value is less than the 
+second string's corresponding mismatching character, and a positive value otherwise. 
+strcmp("far", "joke");    
+// Negative value 
+strcmp("joke", "far");    
+// Positive value */
