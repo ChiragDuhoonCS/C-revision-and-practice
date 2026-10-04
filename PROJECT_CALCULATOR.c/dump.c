@@ -1,6 +1,79 @@
 #include <stdio.h>
 
-i
+int isDigit(char ch)
+{
+    if (ch >= '0' && ch <= '9')
+        return 1;
+    else
+        return 0;
+}
+
+int isLetter(char ch)
+{
+    if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+        return 1;
+    else
+        return 0;
+}
+
+int isOperator(char ch)
+{
+    if (ch == '+' || ch == '-' || ch == '*' ||
+        ch == '/' || ch == '%' || ch == '^')
+        return 1;
+    else
+        return 0;
+}
+
+int isParenthesis(char ch)
+{
+    if (ch == '(' || ch == ')')
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    char expression[100];
+
+    printf("====================================\n");
+    printf("      PROFESSIONAL CALCULATOR\n");
+    printf("====================================\n\n");
+
+    printf("Enter Expression: ");
+
+    fgets(expression, sizeof(expression), stdin);
+
+    /* Remove newline manually */
+    int i = 0;
+
+    while (expression[i] != '\0')
+    {
+        if (expression[i] == '\n')
+        {
+            expression[i] = '\0';
+            break;
+        }
+        i++;
+    }
+
+    printf("\nYou Entered: %s\n\n", expression);
+
+    printf("Character Analysis\n");
+    print
+        else if (isOperator(ch))
+            printf("Operator");
+
+        else if (isParenthesis(ch))
+            printf("Parenthesis");
+
+        else if (ch == ' ')
+            printf("Space");
+
+        else
+            printf("Unknown");
+
         printf("\n");
 
         i++;
