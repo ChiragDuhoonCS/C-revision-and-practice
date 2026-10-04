@@ -61,47 +61,26 @@ int main()
     printf("\nYou Entered: %s\n\n", expression);
 
     printf("Character Analysis\n");
-    print
+    printf("----------------------------\n");
+
+    i = 0;
+
+    while (expression[i] != '\0')
+    {
+        char ch = expression[i];
+
+        printf("Index %d : '%c' -> ", i, ch);
+
+        if (isDigit(ch))
+            printf("Digit");
+
+        else if (isLetter(ch))
+            printf("Letter");
+
         else if (isOperator(ch))
             printf("Operator");
 
-        else if (isParenthesis(ch))
-            printf("Parenthesis");
-
-        else if (ch == ' ')
-            printf("Space");
-
-        else
-            printf("Unknown");
-
-        printf("\n");
-
-        i++;
-    }
-
-    return 0;
-}
-
-/*
-Absolutely. From now on, I'll follow this format:
-
-1. **Complete Theory**
-2. **Internal Working**
-3. **Memory Diagrams**
-4. **Algorithm**
-5. **Code**
-6. **Line-by-line Explanation**
-7. **Dry Runs**
-8. **Common Mistakes**
-9. **Exercises**
-10. **Interview Questions**
-
-I'll try to finish each phase in one response. If a phase exceeds the response limit, I'll split it at a logical point **without skipping anything**.
-
----
-
-# Professional Calculator in C
-
+    
 # Phase 6 — Infix → Postfix Coding (Shunting Yard Algorithm)
 
 ---
