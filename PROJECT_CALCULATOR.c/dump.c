@@ -598,6 +598,49 @@ Parentheses never appear in postfix.
 
 This is the heart of the algorithm.
 
+```c
+else
+{
+    while(!isEmpty() &&
+          peek()!='(' &&
+          (
+             precedence(peek()) >
+             precedence(input[i].op)
+
+             ||
+
+             (
+              precedence(peek()) ==
+              precedence(input[i].op)
+
+              &&
+
+              isLeftAssociative(input[i].op)
+             )
+          ))
+    {
+        Token t;
+
+        t.type = OPERATOR;
+
+        t.op = pop();
+
+        output[out++] = t;
+    }
+
+    push(input[i].op);
+}
+```
+
+---
+
+# Read Slowly
+
+Suppose stack
+
+```
+TOP
+
 *
 
 +
