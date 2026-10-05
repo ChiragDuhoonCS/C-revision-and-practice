@@ -70,6 +70,26 @@ Now pop everything.
 First
 *
 
+Output
+8 5 2 *
+Then
+
++
+
+Output
+8 5 2 * +
+*/
+
+// in () first (  always puah when ) come then weite everything inside it
+// () dont write in postfix
+
+
+
+// S H U T I N G   Y A R D   A L G O
+
+
+/*
+Input
 
 8 + 5 * 2
 
