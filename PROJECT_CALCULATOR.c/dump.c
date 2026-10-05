@@ -652,7 +652,62 @@ Current operator
 +
 ```
 
-Co
+Compare
+
+```
+*
+
+vs
+
++
+```
+
+Since
+
+```
+2 > 1
+```
+
+Pop
+
+```
+*
+```
+
+Then compare again
+
+```
++
+
+vs
+
++
+```
+
+Equal precedence.
+
+Addition is left associative.
+
+Pop again.
+
+Then push current plus.
+
+---
+
+# End of Input
+
+After loop finishes
+
+Some operators may remain.
+
+```c
+while(!isEmpty())
+{
+    Token t;
+
+    t.type = OPERATOR;
+
+    t.op = pop();
 
     output[out++] = t;
 }
